@@ -1,0 +1,18 @@
+-
+  var myFullName = 'Catalin Valerian Sandru'
+  var myJobTitle = 'Training Dragons'
+  var socialList = [
+    {icon: 'facebook', url: 'https://www.facebook.com/sandru.catalin.1'},
+    {icon: 'github', url: 'https://github.com/freebiker2000'},
+    {icon: 'facebook', url: 'https://www.facebook.com/sandru.catalin.1'},
+  ]
+div#landing-page
+div.landing-page
+  .landing-page__wrapper
+    h1.landing-page__name=myFullName
+    h2.landing-page__title=myJobTitle
+    ul.landing-page__social
+      each social in socialList
+        li.landing-page__item
+          label.landing-page__label(for="")
+            span(class=`my-cv__icon--${social.icon}`)
