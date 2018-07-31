@@ -4,7 +4,8 @@
   var socialList = [
     {icon: 'facebook', url: 'https://www.facebook.com/sandru.catalin.1'},
     {icon: 'github', url: 'https://github.com/freebiker2000'},
-    {icon: 'facebook', url: 'https://www.facebook.com/sandru.catalin.1'},
+    {icon: 'youtube', url: 'https://www.youtube.com/channel/UC9FBpyOk7nSgeQrKE1_P94A?view_as=subscriber'},
+    {icon: 'linkedin', url: 'https://www.linkedin.com/in/catalin-valerian-sandru-784819119/'}
   ]
 div#landing-page
 div.landing-page
@@ -12,7 +13,17 @@ div.landing-page
     h1.landing-page__name=myFullName
     h2.landing-page__title=myJobTitle
     ul.landing-page__social
-      each social in socialList
+      each social, key in socialList
         li.landing-page__item
-          label.landing-page__label(for="")
+          label.landing-page__label(for=`message-box-id-${key}`)
             span(class=`my-cv__icon--${social.icon}`)
+    .landing-page__box-body
+      input.landing-page__box-radio(type="radio", name='radio', checked, id="defaul-message-radio")
+      .landing-page__box-message Click the above icons to reveal link
+      .landing-page__box-heather
+        .landing-page__box-info Click to visit
+        label.landing-page__box-close(for="defaul-message-radio") &times;
+      each social, key in socialList
+        input.landing-page__box-radio(type="radio" name='radio' id=`message-box-id-${key}`)
+        .landing-page__box-message
+          a.landing-page__box-link(href=social.url, target="_blank")=social.url
