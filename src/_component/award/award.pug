@@ -1,4 +1,37 @@
 -
   var awardHeader = '#Awards'
+  var awardList = [
+    {
+      title: 'Fastest learner from zero to hero',
+      description: 'I was awarded for the fastest learner of HTML, CSS and JavaScript by the FreeCodeCamp community',
+      location: 'Free Code Camp, London',
+      date: 'July 2018'
+    },
+    {
+      title: '2nd place at BiciCooltura',
+      description: 'I was awarded the 2nd place at the trial bike challange, from 12 other participants',
+      location: 'Iasi, Ramania',
+      date: 'September 2010'
+      }
+  ];
 #award
   .award__header=awardHeader
+  each award in awardList
+    .award__card
+      .award__icon
+        span.my-cv__icon--trophy
+      .award__title=award.title
+        
+      .award__icon
+        span.my-cv__icon--info
+      .award__description=award.description
+
+      .award__icon
+        span.my-cv__icon--map2
+      .award__location=award.location
+
+      .award__icon
+        span.my-cv__icon--calendar
+      .award__date=award.date
+
+
