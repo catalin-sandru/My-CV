@@ -1,0 +1,36 @@
+-
+  var header = '#what can I do';
+  var whatCanIDoList = [
+    {
+      title: 'Front End',
+      skillList: [
+        'Dragon Trainer',
+        'Cooking',
+        'Freedom Fighter',
+        'Scuba Diver',
+        'Pro Snowboarder',
+        'Trial Bike Rider',
+      ]
+    },
+    {
+      title: 'Back End',
+      skillList: [
+        'Ghost Hunter',
+        'Painter',
+        'Mechanic',
+        'Paraglider',
+        '4x4 Enthusiast',
+        'World Traveler',
+      ]
+    }
+  ];
+
+#what-can-i-do
+.what-can-i-do
+  .what-can-i-do__header=header
+  each whatCanIDo in whatCanIDoList
+    .what-can-i-do__title=whatCanIDo.title
+    .what-can-i-do__list
+      each skill in whatCanIDo.skillList
+        .what-can-i-do__skill=skill
+
