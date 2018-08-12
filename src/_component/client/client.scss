@@ -1,0 +1,14 @@
+.client__header {
+  color: $color-periwinkle-gray;
+  @extend %header;
+}
+
+.client__image {
+  text-align: center;
+}
+
+.resize {
+  width: 300px;
+  height: auto;
+  padding: 1rem;
+}
