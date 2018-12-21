@@ -60,3 +60,9 @@
       }
     }  
 }
+
+@media (orientation:portrait) {
+  .landscape__button {
+    display: none;
+  }
+}
